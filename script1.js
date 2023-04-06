@@ -46,7 +46,7 @@ function showTasks()
     }
     let newLiTag='';
     listArr.forEach((element,index) => {
-     newLiTag +=`<li> ${element} <span onclick="deleteTask(${index})";><i class="fas fa-trash></i></span></li>`;
+     newLiTag +=`<li> ${element} <span onclick="deleteTask(${index})";><i class="fas fa-trash"></i></span></li>`;
    });
       todolst.innerHTML=newLiTag;  
       inputbox.value="";
