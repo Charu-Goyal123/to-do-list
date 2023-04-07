@@ -1,6 +1,6 @@
 
-container=document.querySelector(".container");
-pwShowHide=document.querySelector(".showhidepw");
+// container=document.querySelector(".container");
+// pwShowHide=document.querySelector(".showhidepw");
 pwfields=document.querySelector(".password");
 
 
@@ -28,10 +28,10 @@ function loginvalidation()
 {
     let email=document.forms.loginform.email.value;
     let password=document.forms.loginform.password.value;
-    // let regEmail="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)`$"
+     let regEmail=/^\w+([\.]?\w+)*@\w+([\.]?\w+)*(\.\w{2,3})+$/;
     console.log(email);
     console.log(password);
-    if (email==""){
+    if (email=="" || !regEmail.test(email)){
         alert("please enter your email properly");
         email.focus();
         return false;
@@ -45,6 +45,7 @@ function loginvalidation()
         console.log("Login successful");
         alert("Login successful");
         // location.replace("todo.html");
-        window.open("todo.html","_blank");
+       window.open("todo1.html","_blank");
+       //window.location.href="todo.html"
     }
 }
